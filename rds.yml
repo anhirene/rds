@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: A sample template
+Resources:
+  MyInstance:
+    Properties:
+      MasterUsername: "admin"
+      DBInstanceClass: "db.t2.micro"
+      Engine: "mysql"
+      AllocatedStorage: 15
+      AutoMinorVersionUpgrade: false
+      ManageMasterUserPassword: true
+      #MasterUserSecret:
+        #KmsKeyId: !Ref KMSKey
+    Type: "AWS::RDS::DBInstance"
